@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>ICD-10-CM/PCS 進階模糊搜尋</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ICD-10-CM/PCS 進階搜尋</h1>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="輸入ICD-10碼、描述、腫瘤分類...">
+    <select id="scopeSelect">
+      <option value="all">全部</option>
+      <option value="主索引">主索引</option>
+      <option value="外部索引">外部索引</option>
+      <option value="Tabular List">Tabular List</option>
+      <option value="腫瘤索引">腫瘤索引</option>
+    </select>
+    <button onclick="searchICD()">搜尋</button>
+  </div>
+  <div id="results"></div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
